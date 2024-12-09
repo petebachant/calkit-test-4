@@ -5,3 +5,9 @@ description: Just a test.
 git_repo_url: https://github.com/petebachant/calkit-test-4
 questions:
   - Does this work?
+publications:
+  - path: paper.pdf
+    type: report
+    title: My report
+    description: This is a report
+    stage:
