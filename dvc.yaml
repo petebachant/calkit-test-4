@@ -1,0 +1,9 @@
+stages:
+  build-paper-2:
+    cmd: calkit runenv -n latex "cd paper-2 && latexmk -interaction=nonstopmode -pdf
+      paper.tex"
+    deps:
+    - .calkit/environments/latex.yaml
+    - paper-2/paper.tex
+    outs:
+    - paper-2/paper.pdf

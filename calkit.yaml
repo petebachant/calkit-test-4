@@ -11,3 +11,11 @@ publications:
     title: My report
     description: This is a report
     stage:
+  - path: paper-2/paper.pdf
+    kind: book
+    title: Paper 2
+    description: This is the second paper
+    stage: build-paper-2
+environments:
+  latex:
+    _include: .calkit/environments/latex.yaml
