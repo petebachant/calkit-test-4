@@ -1,6 +1,9 @@
 [core]
     autostage = true
-    remote = calkit
+    remote = calkit-local
 ['remote "calkit"']
     url = https://api.calkit.io/projects/petebachant/calkit-test-4/dvc
+    auth = custom
+['remote "calkit-local"']
+    url = http://api.localhost/projects/petebachant/calkit-test-4/dvc
     auth = custom
