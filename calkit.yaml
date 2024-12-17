@@ -10,6 +10,8 @@ publications:
     type: report
     title: My report
     description: This is a report.
+    imported_from:
+      url: https://google.com/some-report
     stage:
   - path: paper-2/paper.pdf
     kind: book
