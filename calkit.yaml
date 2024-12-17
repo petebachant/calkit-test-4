@@ -9,7 +9,7 @@ publications:
   - path: paper.pdf
     type: report
     title: My report
-    description: This is a report
+    description: This is a report.
     stage:
   - path: paper-2/paper.pdf
     kind: book
