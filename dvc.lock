@@ -1,8 +1,7 @@
 schema: '2.0'
 stages:
   build-paper-2:
-    cmd: calkit runenv -n latex "cd paper-2 && latexmk -interaction=nonstopmode -pdf
-      paper.tex"
+    cmd: "calkit runenv -n latex -- latexmk -cd -interaction=nonstopmode -pdf paper-2/paper.tex\n"
     deps:
     - path: .calkit/environments/latex.yaml
       hash: md5
@@ -15,5 +14,18 @@ stages:
     outs:
     - path: paper-2/paper.pdf
       hash: md5
-      md5: 910cfca13efa2c1d2446c77692298f53
+      md5: 97e890481decc5f477468b51cb15737f
       size: 246653
+  plot:
+    cmd: python plot.py
+    deps:
+    - path: plot.py
+      hash: md5
+      md5: eba9cea799867a19d51c56b0b177a0e1
+      size: 159
+    outs:
+    - path: figs
+      hash: md5
+      md5: 3b22686430e564b276447d7598f96f74.dir
+      size: 35828
+      nfiles: 2

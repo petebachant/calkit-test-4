@@ -163,3 +163,4 @@ cython_debug/
 /paper.pdf
 
 .DS_Store
+/figs

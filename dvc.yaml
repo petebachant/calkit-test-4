@@ -1,9 +1,16 @@
 stages:
-  build-paper-2:
-    cmd: calkit runenv -n latex "cd paper-2 && latexmk -interaction=nonstopmode -pdf
-      paper.tex"
+  plot:
+    cmd: python plot.py
     deps:
-    - .calkit/environments/latex.yaml
-    - paper-2/paper.tex
+      - plot.py
     outs:
-    - paper-2/paper.pdf
+      - figs
+  build-paper-2:
+    cmd: >
+      calkit runenv -n latex --
+      latexmk -cd -interaction=nonstopmode -pdf paper-2/paper.tex
+    deps:
+      - .calkit/environments/latex.yaml
+      - paper-2/paper.tex
+    outs:
+      - paper-2/paper.pdf

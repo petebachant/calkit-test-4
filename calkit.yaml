@@ -21,3 +21,8 @@ publications:
 environments:
   latex:
     _include: .calkit/environments/latex.yaml
+figures:
+  - path: figs/plot1.png
+    title: Plot 1
+  - path: figs/plot2.png
+    title: Plot 2
